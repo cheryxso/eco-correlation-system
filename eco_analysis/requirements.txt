@@ -13,3 +13,5 @@ scipy
 httpx
 reportlab
 openpyxl
+python-dotenv
+email-validator
