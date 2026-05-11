@@ -1,0 +1,13 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.local
+build/
+dist/
+*.log
+.DS_Store
+Thumbs.db
