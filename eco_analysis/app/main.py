@@ -14,14 +14,17 @@ app = FastAPI(
     version="1.0.0"
 )
 
-frontend_url = os.getenv("FRONTEND_URL", "http://localhost:3000")
+frontend_url = os.getenv("FRONTEND_URL", "https://eco-analysis-frontend.onrender.com")
+
+allowed_origins = [
+    "http://localhost:3000",
+    "https://eco-analysis-frontend.onrender.com",
+    frontend_url,
+]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        frontend_url,
-    ],
+    allow_origins=list(set(allowed_origins)),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
